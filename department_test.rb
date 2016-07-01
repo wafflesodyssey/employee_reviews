@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require "./department_class"
+require "./department"
 require "./employee_class"
 
 

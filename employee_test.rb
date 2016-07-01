@@ -32,7 +32,7 @@ end
 
 
 
-# employee = ['PattyBell', 'ElizabethHoover', 'OttoMan']
+
 #
   # review_text "Patty Bell has been consistent with teaching in the English
   #department
