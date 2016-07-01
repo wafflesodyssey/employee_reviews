@@ -12,5 +12,12 @@ class Department
   @department_list << name
   end
 
+  def total_salary
+    sum = 0
+    @department_list.each do |emp|
+      sum += emp.salary
+    end
+    return sum
+  end
 
 end
