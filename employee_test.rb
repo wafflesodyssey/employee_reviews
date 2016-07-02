@@ -35,8 +35,17 @@ class EmployeeTest < MiniTest::Test
       improve her methods. She is also seen to be good with helping the students."
 
     patty.review = review
+
     assert_equal review, patty.review
   end
+
+  def test_employee_performance
+    patty  = Employee.new('Patty Bell', 'pattybell@gmail.com', '7033961582', 50000.00)
+    performance = "satisfactorily"
+    patty.performance = performance
+    assert_equal performance, patty.performance
+  end
+
 
 
 end
