@@ -45,9 +45,9 @@ class EmployeeTest < MiniTest::Test
 
   def test_employee_raise
     patty  = Employee.new('Patty Bell', 'pattybell@gmail.com', '7033961582', 50000.00)
-    raise_salary = @salary * 1.1
-    patty.raise_salary = raise_salary
-    assert_equal raise_salary, patty.raise_salary
+    pre_raise_salary = patty.salary
+    patty.give_raise(1.1)
+    assert_equal pre_raise_salary*1.1, patty.salary
   end
 
 end
