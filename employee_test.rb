@@ -17,7 +17,6 @@ class EmployeeTest < MiniTest::Test
   end
 
 
-
   def test_employee_salary
     patty     = Employee.new('Patty Bell', 'pattybell@gmail.com', '7033961582', 50000.00)
     elizabeth = Employee.new('Elizabeth Hoover', 'ehoover@gmail.com', '7033961200', 54000.00)
@@ -33,9 +32,7 @@ class EmployeeTest < MiniTest::Test
     review = "Patty Bell has been consistent with teaching in the English
       department for a while now. She has a solid foundation and continues to
       improve her methods. She is also seen to be good with helping the students."
-
     patty.review = review
-
     assert_equal review, patty.review
   end
 
@@ -46,6 +43,11 @@ class EmployeeTest < MiniTest::Test
     assert_equal performance, patty.performance
   end
 
-
+  def test_employee_raise
+    patty  = Employee.new('Patty Bell', 'pattybell@gmail.com', '7033961582', 50000.00)
+    raise_salary = @salary * 1.1
+    patty.raise_salary = raise_salary
+    assert_equal raise_salary, patty.raise_salary
+  end
 
 end
