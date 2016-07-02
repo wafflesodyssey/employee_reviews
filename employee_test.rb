@@ -35,18 +35,8 @@ class EmployeeTest < MiniTest::Test
       improve her methods. She is also seen to be good with helping the students."
 
     patty.review = review
-
     assert_equal review, patty.review
   end
 
 
 end
-
-
-
-
-#
-  # review_text "Patty Bell has been consistent with teaching in the English
-  #department
-  # for a while now. She has a solid foundation and continues to improve her
-  #   methods. She is also seen to be good with helping the students"
