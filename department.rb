@@ -20,4 +20,8 @@ class Department
     return sum
   end
 
+
+  def give_raise(amount)
+    @amount = 7_000
+  end
 end

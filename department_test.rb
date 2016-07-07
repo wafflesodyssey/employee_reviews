@@ -37,7 +37,7 @@ class DepartmentTest < MiniTest::Test
     assert_equal 161000, english.total_salary
   end
 
-  def test_give_raise_of_department
+  def test_pre_raise_of_department
     patty = Employee.new('Patty Bell', 'pattybell@gmail.com', '7033961582', 50000.00)
     patty.performance = 'satisfactorily'
     elizabeth = Employee.new('Elizabeth Hoover', 'ehoover@gmail.com', '7033961200', 54000.00)
@@ -57,10 +57,19 @@ class DepartmentTest < MiniTest::Test
 
     pre_raise_department_salary = english.total_salary
 
-    english.give_raise(7_000)
+    #english.give_raise(7_000)
 
     assert_equal elizabeth.salary, pre_raise_elizabeth_salary
 
-    assert_equal department.total_salary, pre_raise_department_salary + 7_000
+    #assert_equal department.total_salary, pre_raise_department_salary + 7_000
   end
 end
+
+  def test_give_raise_of_department
+    patty = Employee.new('Patty Bell', 'pattybell@gmail.com', '7033961582', 50000.00)
+    patty.performance = 'satisfactorily'
+    english = Department.new('English')
+    english.add_employee(patty)
+    english.give_raise(7_000)
+    assert_equal department.total_salary, pre_raise_department_salary + 7_000
+  end
